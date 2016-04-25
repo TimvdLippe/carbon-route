@@ -158,9 +158,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         test('changing the urlSpace pattern and testing paths', function() {
           setLocationClick('/test');
 
-          // carbonLocation.urlSpaceRegex = '/foo';
-          //
-          // expect(carbonLocation.route.path).to.be.equal('/test');
+          carbonLocation.urlSpaceRegex = '/foo';
+
+          expect(carbonLocation.route.path).to.be.equal('/test');
           //
           // setLocationClick('/foo');
           // expect(carbonLocation.route.path).to.be.equal('/foo');
