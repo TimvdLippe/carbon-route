@@ -172,15 +172,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           expect(carbonLocation.route.path).to.be.equal('/foo/bar');
 
           carbonLocation.urlSpaceRegex = '/foo/[0-9]+';
-          //
-          // setLocationClick('/foo/123');
-          // expect(carbonLocation.route.path).to.be.equal('/foo/123');
-          //
-          // setLocationClick('/foo/');
-          // expect(carbonLocation.route.path).to.be.equal('/foo/123');
-          //
-          // setLocationClick('/foo/456');
-          // expect(carbonLocation.route.path).to.be.equal('/foo/456');
+
+          setLocationClick('/foo/123');
+          expect(carbonLocation.route.path).to.be.equal('/foo/123');
+
+          setLocationClick('/foo/');
+          expect(carbonLocation.route.path).to.be.equal('/foo/123');
+
+          setLocationClick('/foo/456');
+          expect(carbonLocation.route.path).to.be.equal('/foo/456');
         });
       });
     });
