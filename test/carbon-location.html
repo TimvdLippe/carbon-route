@@ -171,7 +171,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           setLocationClick('/bar');
           expect(carbonLocation.route.path).to.be.equal('/foo/bar');
 
-          // carbonLocation.urlSpaceRegex = '/foo/[0-9]+';
+          carbonLocation.urlSpaceRegex = '/foo/[0-9]+';
           //
           // setLocationClick('/foo/123');
           // expect(carbonLocation.route.path).to.be.equal('/foo/123');
@@ -191,14 +191,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       setup(function() {
         originalLocation = window.location.toString();
+        carbonLocation = fixture('LocationViaHash');
       });
 
       teardown(function() {
         setLocation(originalLocation);
-      });
-
-      setup(function() {
-        carbonLocation = fixture('LocationViaHash');
       });
 
       test('it reflects location.hash to route.path', function() {
