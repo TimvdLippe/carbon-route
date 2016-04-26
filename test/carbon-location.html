@@ -191,14 +191,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       setup(function() {
         originalLocation = window.location.toString();
+        carbonLocation = fixture('LocationViaHash');
       });
 
       teardown(function() {
         setLocation(originalLocation);
-      });
-
-      setup(function() {
-        carbonLocation = fixture('LocationViaHash');
       });
 
       test('it reflects location.hash to route.path', function() {
